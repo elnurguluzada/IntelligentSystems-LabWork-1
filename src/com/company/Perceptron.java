@@ -36,14 +36,10 @@ public class Perceptron {
 
 
 
-    Perceptron() {
 
-        for (int i = 0; i < weights.length; i++) {
 
-            weights[i] = (float) (Math.random() * (1 - (0)));
-            System.out.println(" weights[" + i +"] = " +weights[i]);
-        }
-    }
+
+
 
 
     int makeDecision( float v){
@@ -61,6 +57,14 @@ public class Perceptron {
     void calculateOutput(){
 
         float v;
+
+        // apple 1
+
+        for (int i = 0; i < weights.length; i++) {
+
+            weights[i] = (float) (Math.random() * (1 - (0)));
+            System.out.println(" weights[" + i +"] for apple 1 = " +weights[i]);
+        }
 
         bias = (float) (Math.random() * (1 - (0)));
         System.out.println("Bias = " + bias);
@@ -95,10 +99,59 @@ public class Perceptron {
 
 
 
+        // apple 4
+
+
+        for (int i = 0; i < weights.length; i++) {
+
+            weights[i] = (float) (Math.random() * (1 - (0)));
+            System.out.println(" weights[" + i +"] for apple 4 = " +weights[i]);
+        }
+
+        bias = (float) (Math.random() * (1 - (0)));
+        System.out.println("Bias = " + bias);
+
+
+        v = (float) (apple4[0]*weights[0] + apple4[1]*weights[1] + bias);
+        System.out.println("V for apple 4 = " + v);
+        output = makeDecision(v);
+        System.out.println("y for apple 4 = " + output);
+
+        error = desiredOutput[0] - output;
+        System.out.println("error before training for apple 4  = " + error);
+
+        if(error != 0){
+
+
+            for (int i = 0; i < 100; i++){
+                weights[0]+= learningRate*error*apple1[0];
+                weights[1] += learningRate*error*apple1[1];
+                bias+=learningRate*error;
+
+                v = (float) (apple4[0]*weights[0] + apple4[1]*weights[1] + bias);
+                output=makeDecision(v);
+                error=desiredOutput[0]-output;
+
+            }
+            System.out.println("error after training for apple 4  = " + error);
+
+
+        }
+
+
+
 
         // For pear 2
 
         // calculate v
+
+
+        for (int i = 0; i < weights.length; i++) {
+
+            weights[i] = (float) (Math.random() * (1 - (0)));
+            System.out.println(" weights[" + i +"] for pear 2 = " +weights[i]);
+        }
+
         v = (float) (pear2[0]*weights[0] + pear2[1]*weights[1] + bias);
 
         System.out.println("V = " + v);
