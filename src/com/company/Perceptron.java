@@ -127,7 +127,7 @@ public class Perceptron {
         output = makeDecision(v);
         System.out.println("y for apple 4 = " + output);
 
-        error = desiredOutput[0] - output;
+        error = desiredOutput[1] - output;
         System.out.println("error before training for apple 4  = " + error);
 
         if(error != 0){
@@ -140,7 +140,7 @@ public class Perceptron {
 
                 v = (float) (apple4[0]*weights[0] + apple4[1]*weights[1] + bias);
                 output=makeDecision(v);
-                error=desiredOutput[0]-output;
+                error=desiredOutput[1]-output;
 
             }
             System.out.println("error after training for apple 4  = " + error);
@@ -168,7 +168,7 @@ public class Perceptron {
         output = makeDecision(v);
         System.out.println("y for apple 7 = " + output);
 
-        error = desiredOutput[0] - output;
+        error = desiredOutput[2] - output;
         System.out.println("error before training for apple 7  = " + error);
 
         if(error != 0){
@@ -181,7 +181,7 @@ public class Perceptron {
 
                 v = (float) (apple7[0]*weights[0] + apple7[1]*weights[1] + bias);
                 output=makeDecision(v);
-                error=desiredOutput[0]-output;
+                error=desiredOutput[2]-output;
 
             }
             System.out.println("error after training for apple 7  = " + error);
@@ -216,7 +216,7 @@ public class Perceptron {
         System.out.println("y for apple 3 = " + output);
 
         //calculating error
-        error = desiredOutput[0] - output;
+        error = desiredOutput[3] - output;
         System.out.println("error before training for apple 3  = " + error);
 
         if(error != 0){
@@ -231,7 +231,7 @@ public class Perceptron {
 
                 v = (float) (apple3[0]*weights[0] + apple3[1]*weights[1] + bias);
                 output=makeDecision(v);
-                error=desiredOutput[0]-output;
+                error=desiredOutput[3]-output;
 
             }
             System.out.println("error after training for apple 3  = " + error);
@@ -297,7 +297,7 @@ public class Perceptron {
         output = makeDecision(v);
         System.out.println("Output for pear 4 = " + output);
 
-        error = desiredOutput[4] - output;
+        error = desiredOutput[5] - output;
         System.out.println("Error for pear 4 = " + error);
 
         if(error != 0) {
@@ -312,7 +312,7 @@ public class Perceptron {
 
                 v = (float) (pear4[0]*weights[0] + pear4[1]*weights[1] + bias);
                 output = makeDecision(v);
-                error = desiredOutput[4] - output;
+                error = desiredOutput[5] - output;
             }
 
             System.out.println("Error (after training)  for pear 4 = " + error);
@@ -337,7 +337,7 @@ public class Perceptron {
         output = makeDecision(v);
         System.out.println("Output for pear 1 = " + output);
 
-        error = desiredOutput[4] - output;
+        error = desiredOutput[6] - output;
         System.out.println("Error (before training) for pear 4 = " + error);
 
         if(error != 0) {
@@ -352,7 +352,7 @@ public class Perceptron {
 
                 v = (float) (pear1[0]*weights[0] + pear1[1]*weights[1] + bias);
                 output = makeDecision(v);
-                error = desiredOutput[4] - output;
+                error = desiredOutput[6] - output;
             }
 
             System.out.println("Error (after training)  for pear 1 = " + error);
